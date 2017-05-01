@@ -22,8 +22,9 @@ sudo docker run --name cpi-test -it -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.
 
 # docker run will create a new container and run /bin/bash in an interactive mode:
 
-# OP-TEE expect application directory's location at the root level of qemu-optee
-cp -r /home/optee/cpi_test ~/qemu-optee/
+# build op-tee
+cd /home/optee/qemu-optee/build/
+make all
 
 # apply patches so that optee build include the our test prooject
 cd /home/optee/
@@ -35,11 +36,7 @@ patch -p1 ~/qemu-optee/build/qemu.mk ~/cpi-test-optee-patch/qemu.mk.patch
 cd /home/optee/cpi-test-optee-patch
 chmod +x build.sh test-qemu.sh
 
-# build op-tee
-cd /home/optee/qemu-optee/build/
-make all
-
-# When build finishes, press Ctrl+D to stop container
+# Press Ctrl+D to stop container
 ```
 The container is now setup for running the test and we don't need to be in this interactive mode to run the test.
 Docker allows us to send commands to the container to be executed. 
