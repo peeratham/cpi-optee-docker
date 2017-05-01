@@ -14,7 +14,7 @@ It will take some time.  When it's done, create an instance (container) of the d
 
 ```bash
 test_project_path=<path/to/cpi_test>
-sudo docker run -it -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $test_project_path:/home/optee/cpi_test cpi-optee-test
+sudo docker run --name cpi-test -it -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $test_project_path:/home/optee/cpi_test cpi-optee-test
 ```
 The container will be in an interactive mode. Ctrl+D to exit
 
