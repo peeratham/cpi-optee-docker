@@ -5,8 +5,8 @@ If you don't have Docker installed, install Docker by following this url:
 https://store.docker.com/editions/community/docker-ce-server-ubuntu?tab=description 
 
 ```bash
-git clone <this_repository>
-cd <this_repository>
+git clone https://github.com/jbech-linaro/docker_optee/
+cd docker_optee
 sudo docker build -t cpi-optee-test .
 
 ```
