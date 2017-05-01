@@ -38,7 +38,8 @@ make all
 
 # When build finishes, press Ctrl+D to stop container
 ```
-We are now ready to run the test and don't need to be this interactive mode with the container already configured.
+The container is now setup for running the test and we don't need to be in this interactive mode to run the test.
+Docker allows us to send commands to the container to be executed. 
 
 ```
 # If not already running, start the container first before docker exec ... commands by :
