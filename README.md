@@ -23,6 +23,9 @@ Later use of the container:
 #If not already running, you need to start the container.
 $ docker start cpi-test
 
-#Finally re-attach to the running container
+#Send command to compile project under cpi_test directory
+docker exec -it cpi-test cd /home/optee/qemu_optee/cpi_test && make clean && make
+
+#Re-attach to the running container for interactive mode
 $ docker attach cpi-test
 ```
