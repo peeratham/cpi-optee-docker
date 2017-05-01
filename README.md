@@ -1,4 +1,4 @@
-Dockerfile for CPI-OP-TEE test
+Setting up environments for testing with OP-TEE
 =====================
 
 We use Docker to facilitate testing. Learn more about Docker? https://www.docker.com/what-docker
