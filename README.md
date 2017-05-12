@@ -17,7 +17,7 @@ sudo docker build -t cpi-optee-test .
 It will take some time.  When it's done, create an instance (container) of the docker image by :
 
 ```
-test_project_path=<path/to/cpi_test>
+test_project_path=<path/to/cpi_test> # e.g. ~/projects/CPIRefactor/build/test_output/cpi_test
 sudo docker run --name cpi-test -it -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $test_project_path:/home/optee/cpi_test optee
 
 # docker run will create a new container and run /bin/bash in an interactive mode:
